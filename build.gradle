@@ -12,8 +12,10 @@ buildscript {
     }
 }
 
+
 apply plugin: "org.sonarqube"
 apply plugin: 'java'
+apply plugin: "jacoco"
 
 sourceCompatibility = 1.8
 
