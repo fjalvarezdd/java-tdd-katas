@@ -48,6 +48,48 @@ public class DartsTest {
 
         d.dart(1);
         assertThat(d.getTurn(), is(2));
-        assertThat(d.dartsLeft(), is(0));
+        assertThat(d.dartsLeft(), is(3));
+    }
+
+    @Test
+    public void shouldGoBustReaching1() {
+        // Lets reach 121
+        for (int i=0; i<3; i++) {
+            d.dart(20, Darts.Multiplier.TRIPLE);
+        }
+        d.dart(20, Darts.Multiplier.TRIPLE);
+        d.dart(20, Darts.Multiplier.TRIPLE); // 1!
+
+        assertEquals(121, d.score());
+        assertEquals(3, d.getTurn());
+        assertEquals(3, d.dartsLeft());
+    }
+
+    @Test
+    public void shouldGoBustAboveZero() {
+        // Lets reach 121
+        for (int i=0; i<3; i++) {
+            d.dart(20, Darts.Multiplier.TRIPLE);
+        }
+        d.dart(15, Darts.Multiplier.TRIPLE); // 76
+        d.dart(15, Darts.Multiplier.TRIPLE); // 31
+        d.dart(20, Darts.Multiplier.TRIPLE); // -29! Gone
+
+        assertEquals(121, d.score());
+        assertEquals(3, d.getTurn());
+        assertEquals(3, d.dartsLeft());
+    }
+
+    @Test
+    public void shouldCompleteAGameWithADouble() {
+        // Lets reach 121
+        for (int i=0; i<3; i++) {
+            d.dart(20, Darts.Multiplier.TRIPLE);
+        }
+        d.dart(17, Darts.Multiplier.TRIPLE); // 70
+        d.dart(20, Darts.Multiplier.TRIPLE); // 10
+        d.dart(5, Darts.Multiplier.DOUBLE); // 0
+
+        assertTrue(d.isFinished());
     }
 }
