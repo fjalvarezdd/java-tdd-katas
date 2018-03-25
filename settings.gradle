@@ -1,0 +1,5 @@
+rootProject.name = 'java-katas'
+include 'tdd-helloworld'
+include 'tdd-calc'
+include 'tdd-darts'
+
