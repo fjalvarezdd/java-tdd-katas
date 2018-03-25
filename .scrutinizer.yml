@@ -7,3 +7,5 @@ build:
     tests:
         override:
             - gradle test
+    checks:
+        java: true
