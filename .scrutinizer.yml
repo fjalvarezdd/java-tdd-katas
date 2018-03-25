@@ -2,7 +2,7 @@
 
 tests:
     override:
-        - gradle build
+        - gradle test
 checks:
     java: true
     filter:
