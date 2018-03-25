@@ -1,0 +1,7 @@
+# .scrutinizer.yml
+
+checks:
+    java: true
+    filter:
+        excluded_paths:
+            - test/*
