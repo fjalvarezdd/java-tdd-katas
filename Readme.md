@@ -1,4 +1,4 @@
-# TDD Java Katas in action ![](https://travis-ci.org/fjalvarezdd/java-tdd-katas.svg?branch=master)
+# TDD Java Katas in action [![Build Status](https://travis-ci.org/fjalvarezdd/java-tdd-katas.svg?branch=master)](https://travis-ci.org/fjalvarezdd/java-tdd-katas)
 
 ## TDD Core Concepts
 
