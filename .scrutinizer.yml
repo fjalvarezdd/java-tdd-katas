@@ -1,5 +1,8 @@
 # .scrutinizer.yml
 
+tests:
+    override:
+        - gradle build
 checks:
     java: true
     filter:
