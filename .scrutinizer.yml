@@ -1,8 +1,12 @@
 # .scrutinizer.yml
 
-tests:
-    override:
-        - gradle test
+build:
+    environment:
+        sdkman:
+            - gradle@4.2.1
+    tests:
+        override:
+            - gradle test
 checks:
     java: true
     filter:
