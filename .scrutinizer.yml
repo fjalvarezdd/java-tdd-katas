@@ -7,8 +7,3 @@ build:
     tests:
         override:
             - gradle test
-checks:
-    java: true
-    filter:
-        excluded_paths:
-            - test/*
